@@ -6,18 +6,20 @@ while (True):
 	UserInput = str.lower(input("guest: "))
 	import pyfiglet
 	textascii = pyfiglet.figlet_format("\ntest")
-
-	if UserInput == "hi":
+	
+	#say quit
+	if UserInput == "quit" or UserInput == "end":
+		print(ChatBot_Name + ": bye thanks use me")
+		break
+	
+	if UserInput == "hi" or UserInput == "hello":
 		print(ChatBot_Name + ": hello")
-	elif UserInput == "your owner":
+	elif UserInput == "your owner" or UserInput == "owner":
 		print(
 		    ChatBot_Name +
 		    ": if you fork this project is your projects but official owner is muhamadzakirha"
 		)
-	elif UserInput == "say":
-		print(ChatBot_Name + ": ", UserInput)
-	elif UserInput == "ascii":
+	elif UserInput == "ascii" or UserInput == "acii":
 		print(ChatBot_Name + ":\n", textascii)
-	elif UserInput == "quit":
-		print(ChatBot_Name + ": bye thanks use me")
-		break
+	else:
+	  print(ChatBot_Name + ": whats sorry im not understand")
